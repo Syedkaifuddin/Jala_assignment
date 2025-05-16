@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Image with Opacity</title>
+  <style>
+    .opacity-image {
+      width: 400px;
+      display: block;
+      margin: 50px auto;
+      opacity: 0.5; /* 50% opacity */
+      transition: opacity 0.4s ease;
+      cursor: pointer;
+    }
+    .opacity-image:hover {
+      opacity: 1; /* fully visible on hover */
+    }
+  </style>
+</head>
+<body>
+
+  <h2 style="text-align:center;">Image Opacity Example</h2>
+  <img
+    src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?auto=format&fit=crop&w=600&q=80"
+    alt="Nature"
+    class="opacity-image"
+  />
+
+</body>
+</html>

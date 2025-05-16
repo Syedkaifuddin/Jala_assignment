@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Visibility & Display Properties</title>
+  <style>
+    .visibility-hidden {
+      visibility: hidden;
+      background-color: lightcoral;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .visibility-visible {
+      visibility: visible;
+      background-color: lightgreen;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .visibility-collapse {
+      visibility: collapse;
+      background-color: lightblue;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .display-none {
+      display: none;
+      background-color: yellow;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .display-inline {
+      display: inline;
+      background-color: #ffcccb;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .display-block {
+      display: block;
+      background-color: #cce5ff;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .display-contents {
+      display: contents;
+      background-color: #d7ffd9;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .display-list-item {
+      display: list-item;
+      background-color: #ffebcd;
+      padding: 10px;
+      margin-bottom: 10px;
+      list-style-type: disc;
+    }
+  </style>
+</head>
+<body>
+  <h2>Visibility Property Examples</h2>
+  <div class="visibility-visible">Visible Element</div>
+  <div class="visibility-hidden">Hidden Element (invisible but takes space)</div>
+  <div class="visibility-collapse">Collapsed Element (like hidden in some browsers)</div>
+
+  <h2>Display Property Examples</h2>
+  <div class="display-none">Display None (not shown at all)</div>
+  <span class="display-inline">Display Inline (like span)</span>
+  <div class="display-block">Display Block (like div)</div>
+  <div class="display-contents">
+    Display Contents (element disappears but children remain)
+    <p>Child paragraph inside display-contents</p>
+  </div>
+  <div class="display-list-item">Display List Item (like li)</div>
+</body>
+</html>

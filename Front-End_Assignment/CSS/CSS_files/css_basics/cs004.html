@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Height and Width in px and %</title>
+  <style>
+    .box-px {
+      height: 200px; /* Height in pixels */
+      width: 300px;  /* Width in pixels */
+      background-color: powderblue;
+      line-height: 200px; /* Vertically center text */
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .box-percent {
+      height: 50vh;  /* 50% of viewport height */
+      width: 60%;    /* 60% of parent/container width */
+      background-color: lightgreen;
+      text-align: center;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <h1>Height and Width Example</h1>
+
+  <div class="box-px">
+    Height: 200px; Width: 300px
+  </div>
+
+  <div class="box-percent">
+    Height: 50% viewport height; Width: 60% of container width
+  </div>
+</body>
+</html>

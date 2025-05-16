@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JALA Academy - JavaScript Events</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    section { border: 1px solid #ccc; padding: 15px; margin-bottom: 20px; }
+    button { margin: 5px 0; }
+    input[type="text"] { padding: 5px; margin-top: 5px; }
+  </style>
+</head>
+<body>
+
+  <h1>JALA Academy - JavaScript Events</h1>
+
+  <!-- 1. Event Listener to Show Date and Time -->
+  <section>
+    <h2>1. Show Current Date and Time</h2>
+    <button id="dateBtn">Click to Show Date & Time</button>
+    <p id="dateTimeOutput"></p>
+    <script>
+      document.getElementById("dateBtn").addEventListener("click", function () {
+        const now = new Date();
+        document.getElementById("dateTimeOutput").innerText = now.toString();
+      });
+    </script>
+  </section>
+
+  <!-- 2. JavaScript Validation -->
+  <section>
+    <h2>2. Simple Form Validation</h2>
+    <form onsubmit="return validateForm()">
+      <label for="name">Enter Name:</label><br>
+      <input type="text" id="name" name="name"><br><br>
+      <button type="submit">Submit</button>
+      <p id="validationMsg"></p>
+    </form>
+    <script>
+      function validateForm() {
+        const input = document.getElementById("name").value;
+        if (input.trim() === "") {
+          document.getElementById("validationMsg").innerText = "Name cannot be empty!";
+          return false;
+        }
+        document.getElementById("validationMsg").innerText = "Form submitted successfully!";
+        return true;
+      }
+    </script>
+  </section>
+
+  <!-- 3. console.log() for Debugging -->
+  <section>
+    <h2>3. Debugging with console.log()</h2>
+    <p>Open the browser console to see how debugging works.</p>
+    <script>
+      function debugExample(x, y) {
+        console.log("x:", x);
+        console.log("y:", y);
+        let sum = x + y;
+        console.log("Sum is:", sum);
+        return sum;
+      }
+      debugExample(5, 10);
+    </script>
+  </section>
+
+  <!-- 4. Cookies: Set, Get, Check -->
+  <section>
+    <h2>4. Cookies Example</h2>
+    <button onclick="setCookie('username', 'Kaif', 7)">Set Cookie</button>
+    <button onclick="alert(getCookie('username'))">Get Cookie</button>
+    <button onclick="checkCookie()">Check Cookie</button>
+    <p id="cookieMsg"></p>
+    <script>
+      function setCookie(name, value, days) {
+        const d = new Date();
+        d.setTime(d.getTime() + (days*24*60*60*1000));
+        document.cookie = `${name}=${value};expires=${d.toUTCString()};path=/`;
+        console.log("Cookie set:", document.cookie);
+      }
+
+      function getCookie(name) {
+        const decodedCookie = decodeURIComponent(document.cookie);
+        const cookies = decodedCookie.split(';');
+        for(let i = 0; i < cookies.length; i++) {
+          let c = cookies[i].trim();
+          if (c.indexOf(name + "=") === 0) {
+            return c.substring(name.length + 1);
+          }
+        }
+        return "";
+      }
+
+      function checkCookie() {
+        const user = getCookie("username");
+        if (user !== "") {
+          document.getElementById("cookieMsg").innerText = "Welcome back, " + user + "!";
+        } else {
+          document.getElementById("cookieMsg").innerText = "No user cookie found.";
+        }
+      }
+    </script>
+  </section>
+
+  <!-- 5. JSON Object Access -->
+  <section>
+    <h2>5. JSON Object Access (Dot Notation)</h2>
+    <p id="jsonOutput"></p>
+    <script>
+      const student = {
+        name: "Aisha",
+        age: 22,
+        course: "JavaScript",
+        address: {
+          city: "Hyderabad",
+          zip: "500001"
+        }
+      };
+      document.getElementById("jsonOutput").innerText =
+        `Name: ${student.name}, Course: ${student.course}, City: ${student.address.city}`;
+    </script>
+  </section>
+
+</body>
+</html>

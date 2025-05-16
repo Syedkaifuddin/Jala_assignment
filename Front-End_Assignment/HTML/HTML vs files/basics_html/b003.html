@@ -1,0 +1,111 @@
+<!-- 1, 2, 3, 4: Complete Web Page With Required Tags, Navigation, Pseudo-Classes/Elements -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Q2: HTML Practice Page</title>
+  <style>
+    /* Q4: Pseudo-classes and pseudo-elements */
+    a:hover {
+      color: darkred;
+      font-weight: bold;
+    }
+
+    li::marker {
+      color: green;
+    }
+
+    p::first-letter {
+      font-size: 120%;
+      color: navy;
+    }
+
+    .highlight:hover {
+      background-color: lightyellow;
+    }
+
+    .section {
+      margin-top: 30px;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Q1 + Q2: Headings, Paragraphs, Formatting, Lists, Image, etc. -->
+  <h1 id="top">Q2: My Own Web Page with All HTML Tags</h1>
+
+  <h2>Welcome Section</h2>
+  <p><b>This is a bold paragraph.</b></p>
+  <p><i>This paragraph is in italics for emphasis.</i></p>
+
+  <!-- Anchor Link -->
+  <p>
+    Read more on <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN HTML Docs</a>.
+  </p>
+
+  <p class="highlight">Hover on this text to see the pseudo-class effect.</p>
+
+  <hr>
+
+  <!-- Unordered List -->
+  <h2>Unordered List</h2>
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+  </ul>
+
+  <!-- Ordered List -->
+  <h2>Ordered Steps</h2>
+  <ol>
+    <li>Open Code Editor</li>
+    <li>Write Code</li>
+    <li>Save and Run</li>
+  </ol>
+
+  <!-- Label and Input -->
+  <h2>Form Input</h2>
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username">
+
+  <!-- Blockquote -->
+  <h2>Blockquote</h2>
+  <blockquote>
+    “Code is like humor. When you have to explain it, it’s bad.” – Cory House
+  </blockquote>
+
+  <hr>
+
+  <!-- Image -->
+  <h2>Image Example</h2>
+  <img 
+    src="https://www.w3schools.com/html/img_girl.jpg" 
+    alt="Sample Girl Image" 
+    width="300"
+  >
+
+  <!-- Division and Span -->
+  <div class="section">
+    <h3>This is inside a Div</h3>
+    <p>This line uses a <span style="color: teal;">span tag</span> to color only part of the text.</p>
+  </div>
+
+  <!-- Q3: Navigate within the page -->
+  <div class="section" id="section3">
+    <h2>Q3: Internal Navigation</h2>
+    <p>Click below to jump to the bottom of the page:</p>
+    <a href="#section4">Go to Q4 Section</a>
+  </div>
+
+  <!-- Q4: Pseudo-Classes and Pseudo-Elements -->
+  <div class="section" id="section4">
+    <h2>Q4: CSS Pseudo-Classes and Pseudo-Elements</h2>
+    <p>Hover on links and list markers to see the effects applied using CSS pseudo-classes like <code>:hover</code> and <code>::marker</code>.</p>
+    <a href="#top">Back to Top</a>
+  </div>
+
+</body>
+</html>

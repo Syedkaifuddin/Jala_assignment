@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hero Image</title>
+  <style>
+    .hero {
+      background-image: url('https://source.unsplash.com/1600x600/?nature');
+      height: 60vh;
+      background-position: center;
+      background-size: cover;
+      position: relative;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+    .hero-text {
+      position: relative;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="hero-text">Welcome to Nature World</div>
+  </div>
+
+</body>
+</html>

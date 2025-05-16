@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Table Layout</title>
+  <style>
+    .fixed-table, .auto-table {
+      width: 500px;
+      border-collapse: collapse;
+      margin: 20px auto;
+    }
+    th, td {
+      border: 1px solid #555;
+      padding: 10px;
+      text-align: center;
+    }
+    .fixed-table {
+      table-layout: fixed;
+    }
+    .auto-table {
+      table-layout: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 style="text-align:center;">Table with Fixed Layout</h2>
+  <table class="fixed-table">
+    <tr>
+      <th>Column 1</th>
+      <th>Column 2</th>
+    </tr>
+    <tr>
+      <td>This is a short text.</td>
+      <td>This is a very long text that should be clipped when table-layout is fixed.</td>
+    </tr>
+  </table>
+
+  <h2 style="text-align:center;">Table with Auto Layout</h2>
+  <table class="auto-table">
+    <tr>
+      <th>Column 1</th>
+      <th>Column 2</th>
+    </tr>
+    <tr>
+      <td>This is a short text.</td>
+      <td>This is a very long text that should adjust column width when table-layout is auto.</td>
+    </tr>
+  </table>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Basics - JALA Academy</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    button { margin-top: 10px; }
+    section { border: 1px solid #ccc; padding: 15px; margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+
+  <h1>JALA Academy - JavaScript Basics</h1>
+
+  <!-- 1. Comments -->
+  <section>
+    <h2>1. Single-line and Multi-line Comments</h2>
+    <p>Check the browser console to see the comments.</p>
+    <script>
+      // This is a single-line comment
+      console.log("This is a single-line comment");
+
+      /*
+        This is a multi-line comment.
+        It can span across multiple lines.
+      */
+      console.log("This is a multi-line comment");
+    </script>
+  </section>
+
+  <!-- 2. Sort Fruits -->
+  <section>
+    <h2>2. Sort Fruits in Descending Order</h2>
+    <button onclick="sortFruits()">Sort Fruits</button>
+    <p id="fruitsOutput"></p>
+    <script>
+      const fruits = ["Banana", "Apple", "Mango", "Cherry"];
+      document.getElementById("fruitsOutput").innerText = "Original: " + fruits.join(", ");
+
+      function sortFruits() {
+        const sorted = [...fruits].sort().reverse();
+        document.getElementById("fruitsOutput").innerText = "Sorted Desc: " + sorted.join(", ");
+      }
+    </script>
+  </section>
+
+  <!-- 3. FOR/IN Loop -->
+  <section>
+    <h2>3. FOR/IN Loop</h2>
+    <p id="forInOutput"></p>
+    <script>
+      const car = { brand: "Toyota", model: "Corolla", year: 2020 };
+      let output = "";
+      for (let key in car) {
+        output += key + ": " + car[key] + "<br>";
+      }
+      document.getElementById("forInOutput").innerHTML = output;
+    </script>
+  </section>
+
+  <!-- 4. Object Access -->
+  <section>
+    <h2>4. Object Property Access</h2>
+    <p id="objectOutput"></p>
+    <script>
+      const person = {
+        firstname: "John",
+        lastname: "Doe"
+      };
+      const dotAccess = person.firstname;
+      const bracketAccess = person["lastname"];
+      document.getElementById("objectOutput").innerText = "Dot: " + dotAccess + ", Bracket: " + bracketAccess;
+    </script>
+  </section>
+
+  <!-- 5. Variable Hoisting -->
+  <section>
+    <h2>5. Variable Hoisting</h2>
+    <p id="hoistOutput"></p>
+    <script>
+      hoistedVar = "Initialized before declaration!";
+      var hoistedVar;
+      document.getElementById("hoistOutput").innerText = hoistedVar;
+    </script>
+  </section>
+
+  <!-- 6. Strict Mode -->
+  <section>
+    <h2>6. Strict Mode</h2>
+    <p id="strictOutput"></p>
+    <script>
+      function strictExample() {
+        'use strict';
+        try {
+          undeclaredVariable = 100; // Will throw error in strict mode
+        } catch (e) {
+          return "Error: " + e.message;
+        }
+      }
+      document.getElementById("strictOutput").innerText = strictExample();
+    </script>
+  </section>
+
+ 
+
+</body>
+</html>
+

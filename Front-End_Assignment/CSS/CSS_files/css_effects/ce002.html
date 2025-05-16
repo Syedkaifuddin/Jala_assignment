@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Animations and Pagination</title>
+  <style>
+    /* Animation */
+    @keyframes slideIn {
+      from { transform: translateX(-100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    .animate-box {
+      width: 200px;
+      height: 100px;
+      background-color: #3498db;
+      color: white;
+      line-height: 100px;
+      text-align: center;
+      margin: 20px auto;
+      animation-name: slideIn;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-delay: 1s;
+    }
+
+    /* Pagination without spaces */
+    .pagination {
+      display: flex;
+      justify-content: center;
+      margin: 40px auto;
+      user-select: none;
+    }
+    .pagination a {
+      padding: 10px 15px;
+      border: 1px solid #007bff;
+      color: #007bff;
+      text-decoration: none;
+      transition: background-color 0.3s;
+      cursor: pointer;
+    }
+    .pagination a:hover {
+      background-color: #007bff;
+      color: white;
+    }
+    .pagination a + a {
+      border-left: none; /* no space between links */
+    }
+
+    /* Pagination with spaces */
+    .pagination-space {
+      display: flex;
+      justify-content: center;
+      margin: 40px auto;
+      gap: 10px; /* spaces between */
+    }
+    .pagination-space a {
+      padding: 10px 15px;
+      border: 1px solid #28a745;
+      color: #28a745;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .pagination-space a:hover {
+      background-color: #28a745;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="animate-box">Animated Box</div>
+
+  <h3 style="text-align:center;">Pagination without spaces</h3>
+  <div class="pagination" aria-label="Pagination">
+    <a href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a>
+  </div>
+
+  <h3 style="text-align:center;">Pagination with spaces</h3>
+  <div class="pagination-space" aria-label="Pagination">
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+  </div>
+
+</body>
+</html>

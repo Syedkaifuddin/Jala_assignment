@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Smooth Scroll Page</title>
+  <style>
+    html {
+      scroll-behavior: smooth; /* Enables smooth scrolling */
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
+    #top, #bottom {
+      padding: 10px;
+      background-color: #007acc;
+      color: white;
+      width: fit-content;
+      border-radius: 4px;
+      text-decoration: none;
+      display: inline-block;
+      margin: 10px 0;
+    }
+    #bottom {
+      margin-top: 1000px; /* Creates space to scroll */
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#bottom" id="top">Click to go to bottom of page</a>
+
+  <p>
+    <!-- Repeated text to make page long -->
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet, nisl nec pellentesque malesuada, ligula justo sodales nisl, vitae cursus sem augue eu nisl. 
+    <!-- repeat or add enough text -->
+  </p>
+  <p style="height: 1200px;"></p> <!-- Spacer -->
+
+  <a href="#top" id="bottom">Click to go to top of page</a>
+
+</body>
+</html>

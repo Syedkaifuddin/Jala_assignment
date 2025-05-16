@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JALA Academy - JS Access & Properties</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    section { border: 1px solid #ccc; padding: 15px; margin-bottom: 20px; }
+    button { margin: 5px 0; }
+  </style>
+</head>
+<body>
+
+  <h1>JALA Academy - JavaScript Access and Properties</h1>
+
+  <!-- 1. Use 'this' keyword to disappear a button -->
+  <section>
+    <h2>1. Use <code>this</code> Keyword - Hide Button on Click</h2>
+    <button onclick="this.style.display='none'">Click to Hide Me</button>
+  </section>
+
+  <!-- 2. Call() and Apply() -->
+  <section>
+    <h2>2. Invoke Function using call() and apply()</h2>
+    <p id="callOutput"></p>
+    <p id="applyOutput"></p>
+    <script>
+      function greet(greeting, punctuation) {
+        return greeting + ", " + this.name + punctuation;
+      }
+
+      const person1 = { name: "Alice" };
+      const person2 = { name: "Bob" };
+
+      const resultCall = greet.call(person1, "Hello", "!");
+      const resultApply = greet.apply(person2, ["Hi", "."]);
+
+      document.getElementById("callOutput").innerText = "Using call(): " + resultCall;
+      document.getElementById("applyOutput").innerText = "Using apply(): " + resultApply;
+
+      // Difference: call() takes arguments directly, apply() takes them as an array
+    </script>
+  </section>
+
+  <!-- 3. Counter Button -->
+  <section>
+    <h2>3. Counter on Button Click</h2>
+    <button onclick="incrementCounter()">Count</button>
+    <p id="counterOutput">0</p>
+    <script>
+      let count = 0;
+      function incrementCounter() {
+        count++;
+        document.getElementById("counterOutput").innerText = count;
+      }
+    </script>
+  </section>
+
+  <!-- 4. Counter using Getter and Setter -->
+  <section>
+    <h2>4. Counter using Getter and Setter</h2>
+    <button onclick="counter.value = counter.value + 1">Increase</button>
+    <p id="getterSetterOutput"></p>
+    <script>
+      const counter = {
+        _count: 0,
+        get value() {
+          return this._count;
+        },
+        set value(val) {
+          this._count = val;
+          document.getElementById("getterSetterOutput").innerText = "Counter: " + this._count;
+        }
+      };
+      // Initialize display
+      counter.value = counter.value;
+    </script>
+  </section>
+
+  <!-- 5. Add properties using prototypes -->
+  <section>
+    <h2>5. Add Properties to Function using Prototype</h2>
+    <p id="prototypeOutput"></p>
+    <script>
+      function Person(first, last) {
+        this.firstName = first;
+        this.lastName = last;
+      }
+
+      // Adding a new property using prototype
+      Person.prototype.fullName = function () {
+        return this.firstName + " " + this.lastName;
+      };
+
+      const student = new Person("Kaif", "Syed");
+      document.getElementById("prototypeOutput").innerText = "Full Name (via prototype): " + student.fullName();
+    </script>
+  </section>
+
+</body>
+</html>

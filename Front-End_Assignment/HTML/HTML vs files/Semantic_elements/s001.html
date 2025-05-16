@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Combined Semantic & Non-Semantic HTML5 Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+    }
+    /* Styles for div and span */
+    .non-semantic div {
+      background-color: #228B22;
+      color: white;
+      padding: 10px;
+      margin: 5px 0;
+      font-size: 24px;
+    }
+    .non-semantic span {
+      background-color: #ADD8E6;
+      color: #003366;
+      padding: 3px 6px;
+      font-weight: bold;
+    }
+    /* Styles for semantic elements */
+    .semantic article {
+      background-color: #f0f8ff;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+    }
+    .semantic table, .semantic th, .semantic td {
+      border: 1px solid #333;
+      border-collapse: collapse;
+      padding: 8px;
+    }
+    .semantic table {
+      margin-bottom: 20px;
+      width: 100%;
+    }
+    /* Styles for full HTML5 tags */
+    header, footer, nav, section, article, aside, figure {
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+    }
+    header {
+      background-color: #f8f9fa;
+    }
+    footer {
+      background-color: #e9ecef;
+      text-align: center;
+    }
+    nav ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    nav li {
+      display: inline;
+      margin-right: 15px;
+    }
+    figure {
+      max-width: 300px;
+      margin: 0 auto 20px auto;
+      text-align: center;
+    }
+    mark {
+      background-color: yellow;
+      font-weight: bold;
+    }
+    hgroup h1, hgroup h2 {
+      margin: 0;
+    }
+    hgroup h2 {
+      font-weight: normal;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Section 1: Non-semantic div and span -->
+  <section class="non-semantic">
+    <h2>1. Non-semantic elements: &lt;div&gt; and &lt;span&gt;</h2>
+    <div>This is a block-level &lt;div&gt; element taking full width.</div>
+    <div>Another full-width div block.</div>
+
+    <h3>Inline &lt;span&gt; elements inside a paragraph:</h3>
+    <p>
+      This sentence contains a <span>span element</span> that highlights text inline.
+      More normal text and another <span style="color: red;">red colored span</span>.
+    </p>
+  </section>
+
+  <hr />
+
+  <!-- Section 2: Semantic elements form, table, article -->
+  <section class="semantic">
+    <h2>2. Semantic elements: &lt;form&gt;, &lt;table&gt;, and &lt;article&gt;</h2>
+
+    <article>
+      <h3>Article Title 1</h3>
+      <p>This article explains semantic HTML and why it matters.</p>
+    </article>
+
+    <article>
+      <h3>Article Title 2</h3>
+      <p>Another article talking about web standards and accessibility.</p>
+    </article>
+
+    <table>
+      <caption>Company Contacts</caption>
+      <thead>
+        <tr>
+          <th>Company</th><th>Contact</th><th>Country</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Globex Corp</td><td>John Smith</td><td>USA</td></tr>
+        <tr><td>Initech</td><td>Jane Doe</td><td>Canada</td></tr>
+      </tbody>
+    </table>
+
+    <form action="/search" method="get">
+      <label for="searchInput">Search:</label>
+      <input type="search" id="searchInput" name="q" placeholder="Enter keywords..." />
+      <button type="submit">Search</button>
+    </form>
+  </section>
+
+  <hr />
+
+  <!-- Section 3: All HTML5 semantic tags -->
+  <section>
+    <h2>3. Using all HTML5 semantic tags</h2>
+
+    <header>
+      <hgroup>
+        <h1>Example Company</h1>
+        <h2>Innovating the web</h2>
+      </hgroup>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section>
+      <article>
+        <h3>Article One</h3>
+        <p>This article includes a <mark>highlighted phrase</mark> to draw attention.</p>
+        <time datetime="2025-05-16">May 16, 2025</time>
+      </article>
+
+      <article>
+        <h3>Article Two</h3>
+        <p>Another article to demonstrate multiple semantic sections.</p>
+      </article>
+    </section>
+
+    <aside>
+      <p>This sidebar offers helpful tips and related information.</p>
+    </aside>
+
+    <figure>
+      <img src="https://www.bing.com/images/search?view=detailV2&ccid=%2bOPlR%2feR&id=D021B1D90C11512B4EDAA032800800EFF66B44E7&thid=OIP.-OPlR_eRVYNy5IbdXCW5rwHaDt&mediaurl=https%3a%2f%2fwww.powertrafic.fr%2fwp-content%2fuploads%2f2023%2f04%2fimage-ia-exemple.png&exph=570&expw=1140&q=image&simid=608050697411064856&FORM=IRPRST&ck=3FAEB3AB460AE316E3CD9A8724AB3ED3&selectedIndex=14&itb=0" alt="Sample Image" />
+      <figcaption>Figure 1: Sample placeholder image</figcaption>
+    </figure>
+
+    <footer>
+      &copy; 2025 Example Company. All rights reserved.
+    </footer>
+  </section>
+
+</body>
+</html>

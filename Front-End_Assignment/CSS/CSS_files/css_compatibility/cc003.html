@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Grid</title>
+  <style>
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      padding: 20px;
+    }
+
+    .grid-item {
+      background-color: #3498db;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .named-grid {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "menu content"
+        "footer footer";
+      gap: 10px;
+    }
+
+    .header { grid-area: header; background: #333; }
+    .menu { grid-area: menu; background: #888; }
+    .content { grid-area: content; background: #ccc; }
+    .footer { grid-area: footer; background: #444; }
+    .named-grid div {
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 style="text-align:center;">Basic CSS Grid</h2>
+  <div class="grid">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+    <div class="grid-item">6</div>
+  </div>
+
+  <h2 style="text-align:center;">Named Grid Areas</h2>
+  <div class="named-grid">
+    <div class="header">Header</div>
+    <div class="menu">Menu</div>
+    <div class="content">Main Content</div>
+    <div class="footer">Footer</div>
+  </div>
+
+</body>
+</html>

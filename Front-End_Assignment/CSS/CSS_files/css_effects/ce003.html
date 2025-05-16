@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Position Properties</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      height: 150vh; /* to enable scroll for sticky and fixed */
+    }
+    .static {
+      position: static;
+      background-color: lightcoral;
+      padding: 10px;
+      margin: 10px;
+    }
+    .relative {
+      position: relative;
+      top: 10px;
+      left: 10px;
+      background-color: lightgreen;
+      padding: 10px;
+      margin: 10px;
+    }
+    .absolute {
+      position: absolute;
+      top: 100px;
+      right: 20px;
+      background-color: lightblue;
+      padding: 10px;
+      width: 150px;
+    }
+    .fixed {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      background-color: lightpink;
+      padding: 10px;
+      width: 100%;
+      text-align: center;
+    }
+    .sticky {
+      position: sticky;
+      top: 0;
+      background-color: orange;
+      padding: 10px;
+      font-weight: bold;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sticky">Sticky Header (sticks to top when scrolling)</div>
+  <div class="static">Static Position (default)</div>
+  <div class="relative">Relative Position (offset by top:10px, left:10px)</div>
+  <div class="absolute">Absolute Position (from nearest positioned ancestor or body)</div>
+
+  <div style="height: 800px;">Scroll down to see fixed position</div>
+
+  <div class="fixed">Fixed Footer (always at bottom of viewport)</div>
+
+</body>
+</html>
