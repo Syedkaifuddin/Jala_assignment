@@ -7,7 +7,7 @@ These include:
 - ✅ Front-End Technologies (HTML, CSS, JavaScript)  
 - ✅ SQL Assignments (including video + `sql_project.sql` file)  
 
-## 📁 Project Structure
+### 📁 Project Structure
 
 📁 Assignment/
 │
