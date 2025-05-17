@@ -9,36 +9,11 @@ These include:
 
 ### 📁 Project Structure
 
-📁 Assignment/
-│
-├── 📁 Front-End_Assignment/
-│   ├── 📁 CSS/
-│   │   ├── 📁 CSS_files/
-│   │   └── 📁 Output_screenshots/
-│   ├── 📁 HTML/
-│   │   ├── 📁 HTML_vs_files/
-│   │   └── 📁 Output_screenshots/
-│   └── 📁 java_script/
-│       ├── 📁 js_files/
-│       └── 📁 output_screenshots/
-│
-├── 📁 python_assignments/
-│   ├── 📁 Output_screenshots/
-│   ├── Python Programs:
-│   │   ├── 1.Python_basics.py
-│   │   ├── 2.Operators.py
-│   │   ├── ...
-│   │   ├── 13.Method_overloading.py
-│   │   └── 15.Dictionary.py
-│
-├── 📁 SQL_assignments/
-│   ├── Output_video.mp4
-│   └── sql_project.sql  ⬅️ Contains all executed queries
-│
-└── 📄 README.md
+## 📁 Project Structure
 
+![Project Structure](./assets/project_structure.png)
 
-
+> 📸 *This image shows the complete project folder structure.*
 
 ## ✅ Assignment Details
 
