@@ -9,46 +9,36 @@ These include:
 
 ## 📁 Project Structure
 
-Assignment/
+📁 Assignment/
 │
-├── Front-End_Assignment/
-│ ├── CSS/
-│ │ ├── CSS_files/
-│ │ └── Output_screenshots/
-│ ├── HTML/
-│ │ ├── HTML vs files/
-│ │ └── Output_screenshots/
-│ └── java_script/
-│ ├── js_files/
-│ └── output_screenshots/
+├── 📁 Front-End_Assignment/
+│   ├── 📁 CSS/
+│   │   ├── 📁 CSS_files/
+│   │   └── 📁 Output_screenshots/
+│   ├── 📁 HTML/
+│   │   ├── 📁 HTML_vs_files/
+│   │   └── 📁 Output_screenshots/
+│   └── 📁 java_script/
+│       ├── 📁 js_files/
+│       └── 📁 output_screenshots/
 │
-├── python_assignments/
-│ ├── Output_screenshots/
-│ ├── 1.Python_basics.py
-│ ├── 2.Operators.py
-│ ├── 3.Loops.py
-│ ├── 4.Arrays.py
-│ ├── 5.static.py
-│ ├── 6.Strings.py
-│ ├── 7.Inheritance.py
-│ ├── 8.Acces_modifier.py
-│ ├── 9.Abstract_class.py
-│ ├── 10.packages/
-│ ├── 11.Files/
-│ ├── 12.Constructors.py
-│ ├── 13.Method_overloading.py
-│ ├── 14.Exceptions.py
-│ ├── 15.Dictionary.py
-│ └── sample_write.txt
+├── 📁 python_assignments/
+│   ├── 📁 Output_screenshots/
+│   ├── Python Programs:
+│   │   ├── 1.Python_basics.py
+│   │   ├── 2.Operators.py
+│   │   ├── ...
+│   │   ├── 13.Method_overloading.py
+│   │   └── 15.Dictionary.py
 │
-├── SQL_assignments/
-│ ├── Output_video.mp4
-│ └── sql_project.sql <-- Contains all executed queries
+├── 📁 SQL_assignments/
+│   ├── Output_video.mp4
+│   └── sql_project.sql  ⬅️ Contains all executed queries
 │
-└── README.md
+└── 📄 README.md
 
 
----
+
 
 ## ✅ Assignment Details
 
